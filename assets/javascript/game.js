@@ -1,120 +1,4 @@
-//bowie help
-// function clickTracker(event) {
-//     const key = event.key.toLowerCase();
-
-//     if (key === randomizer) {
-//         // increase win count
-//         win = win + 1;
-//         winTracker.innerHTML = win;
-//         // reset game
-//         resetGame();
-//     }
-//     else {
-
-
-
-// Collapse 
-//guessing and letter staying
-//double for loop. looping thru
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // Global Variables
+// Global Variables
  var wordBank = ['corgi', 'pitbull', 'husky'];
  var wins = 0;
  var loss = 0;
@@ -129,7 +13,7 @@
 
 function startGame() {
     //picks random word
-    console.log(wordBank [2]);
+    console.log(wordBank [1]);
     randWord = wordBank[Math.floor(Math.random() * wordBank.length)].split("");
     console.log ('random Word = ' + randWord)
     for(var i = 0; i < randWord.length; i++)
@@ -139,6 +23,7 @@ function startGame() {
     // printing underscores to the screen
     document.getElementById('word-blanks').textContent = underscores.join(" ");
     console.log(underscores)
+    
     //reset
     wrongLetter = [];
     guessesLeft = 9;
@@ -148,8 +33,13 @@ function startGame() {
 
 }
 function winLose()
+// If guess right letter, show correct letter
+// If guess wrong, guesses remaining goes down 1
+
+///////////// Attempted to write another for loop to search for correct letter- failed.
+/////////// Console shows that guesses go down as non matching letter is guessed, but can't complete code.
 {
-  
+ 
 }
 // User Guessses
 document.onkeyup = function(event)
@@ -165,14 +55,14 @@ document.onkeyup = function(event)
             if(randWord[i] === userGuesses)
             {
             underscores[i] = userGuesses;
-            console.log(underscores);    
+            console.log(underscores);
             }
             else {
                 console.log(" ");
             }
         }
     }
-    else 
+    else
     {
     wrongLetter.push(userGuesses);
     guessesLeft--;
@@ -180,8 +70,15 @@ document.onkeyup = function(event)
     console.log(wrongLetter);
     }
 }
+    // code I tried to make work from office hours/classmate to let correct letter stay visible (show) on screen if guessed correctly. 
+
+    // const checkC= function(item);
+//     for(let i=0; i< wordbox[0].length;i++){
+//         for(x=0;x<clicked.length;x++){
+//             if(clicked.[x]===wordBank[0][i]){
+//                 helements[i].setAttribute("class","show")
  
 
-// Main
+// Game ends, restart
+// game restarts as page is refreshed, could not get reset code to we loop after loss/win
 startGame();
-

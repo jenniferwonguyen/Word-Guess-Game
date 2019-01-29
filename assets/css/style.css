@@ -1,0 +1,50 @@
+body {
+    background: black;
+    color: white;
+}
+
+#header {
+    text-align: center;
+}
+
+/* #gamebox {
+    border: 2px dashed white;
+    padding: 4em;
+    width: 30%; */
+/* } */
+.container {
+    width: 938px;
+    margin: auto;
+}
+#first {
+    width: 300px;
+    float: left;
+    height: 800px;
+    background-color: blue;
+    border: 2px dashed white;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 40px;
+}
+#second {
+    width: 300px;
+    float: right;
+    height: 800px;
+    background-color: green;
+    color: white;
+    border: 2px dashed white;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+    margin: 40px;
+}
+#clear {
+    clear: both;
+}
+a {
+    color: white;
+}
+* {
+    color: white;
+}
